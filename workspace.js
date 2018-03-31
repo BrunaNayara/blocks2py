@@ -23,4 +23,3 @@ function myUpdateFunction(event) {
 }
 workspace.addChangeListener(myUpdateFunction);
 
-var button = Blockly.Variables.createVariable(workspace, null, 'panda');
