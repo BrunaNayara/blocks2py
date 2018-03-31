@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Programming Blocks</title>
+  </head>
+  <body>
+    <h1>Blocos</h1>
+
+    <div id="blocklyDiv" style="height: 480px; width: 600px;"></div>
+    <pre class="prettyprint  lang-py" id="codearea"></pre>
+
+    <xml id="toolbox" style="display: none">
+
+      <category name="Input" colour="120">
+      </category>
+      <category name="Output" colour="180">
+        <block type="text_print"></block>
+      </category>
+      <category name="Variables" colour="330">
+        <block type="variables_set"></block>
+        <block type="variables_get"></block>
+        <block type="math_change"></block>
+        <!--
+        <block type="variables_get_dynamic"></block>
+        <block type="variables_set_dynamic"></block>
+        -->
+      </category>
+      <category name="Format" colour="20">
+      </category>
+      <category name="Lists" colour="40">
+        <block type="lists_create_empty"></block>
+        <block type="lists_repeat"></block>
+        <block type="lists_reverse"></block>
+        <block type="lists_isEmpty"></block>
+        <block type="lists_length"></block>
+      </category>
+      <category name="Loops" colour="230">
+        <block type="controls_repeat_ext"></block>
+        <block type="controls_repeat"></block>
+        <block type="controls_whileUntil"></block>
+        <block type="controls_for"></block>
+        <block type="controls_forEach"></block>
+        <block type="controls_flow_statements"></block>
+      </category>
+      <category name="Logic" colour="210">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+        <block type="logic_boolean"></block>
+        <block type="logic_negate"></block>
+        <block type="logic_operation"></block>
+      </category>
+      <category name="Math" colour="250">
+        <block type="math_number"></block>
+        <block type="math_arithmetic"></block>
+        <block type="math_single"></block>
+        <block type="math_trig"></block>
+        <block type="math_constant"></block>
+        <block type="math_number_property"></block>
+        <block type="math_round"></block>
+        <block type="math_on_list"></block>
+        <block type="math_modulo"></block>
+        <block type="math_constrain"></block>
+        <block type="math_random_int"></block>
+        <block type="math_random_float"></block>
+      </category>
+      <category name="Text" colour="170">
+        <block type="text"></block>
+        <block type="text_join"></block>
+        <block type="text_create_join_container"></block>
+        <block type="text_create_join_item"></block>
+        <block type="text_append"></block>
+        <block type="text_length"></block>
+        <block type="text_isEmpty"></block>
+        <block type="text_indexOf"></block>
+        <block type="text_charAt"></block>
+      </category>
+    </xml>
+
+
+
+
+    <!-- Blocks -->
+    <script src="blockly_compressed.js"></script>
+    <script src="blocks_compressed.js"></script>
+    <script src="python_compressed.js"></script>
+    <script src="msg/js/en.js"></script>
+
+    <!-- Prettify -->
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+    <!-- Workspace -->
+    <script src="workspace.js"></script>
+  </body>
+</html>
