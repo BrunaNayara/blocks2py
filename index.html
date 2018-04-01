@@ -15,6 +15,10 @@
     <xml id="toolbox" style="display: none">
 
       <category name="Input" colour="120">
+        <block type="input_read_line"></block>
+        <block type="input_read_integer"></block>
+        <block type="input_read_number"></block>
+        <block type="input_read_string"></block>
       </category>
       <category name="Output" colour="180">
         <block type="text_print"></block>
@@ -66,8 +70,6 @@
       <category name="Text" colour="170">
         <block type="text"></block>
         <block type="text_join"></block>
-        <block type="text_create_join_container"></block>
-        <block type="text_create_join_item"></block>
         <block type="text_append"></block>
         <block type="text_length"></block>
         <block type="text_isEmpty"></block>
@@ -80,10 +82,14 @@
 
 
     <!-- Blocks -->
-    <script src="blockly_compressed.js"></script>
-    <script src="blocks_compressed.js"></script>
-    <script src="python_compressed.js"></script>
+    <script src="blockly/blockly_compressed.js"></script>
+    <script src="blockly/blocks_compressed.js"></script>
+    <script src="generators/python_compressed.js"></script>
     <script src="msg/js/en.js"></script>
+
+    <!-- My Block -->
+    <script src="blocks/input.js"></script>
+    <script src="generators/input.js"></script>
 
     <!-- Prettify -->
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
