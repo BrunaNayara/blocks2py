@@ -1,0 +1,9 @@
+# Purpose: Test Dockerfile
+
+version: '3.5'
+
+services:
+  blocks2py:
+    build: .
+    ports:
+      - '80:80'
