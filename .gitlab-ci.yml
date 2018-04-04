@@ -1,0 +1,28 @@
+image: docker:18.01.0-ce-git
+services:
+  - docker:dind
+stages:
+  - push image
+  - deploy
+
+push image:
+  stage: push image
+  script:
+    - docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASS
+    - docker build -t brunamoreira/blocks2py:latest .
+    - docker push brunamoreira/blocks2py:latest
+    - docker push brunamoreira/blocks2py:latest
+  only:
+    - /master/
+  tags:
+    - docker
+
+deploy:
+  stage: deploy
+  image: cdrx/rancher-gitlab-deploy
+  script:
+    - upgrade --environment $RANCHER_ENVIRONMENT --stack $RANCHER_STACK --service blocks2py --no-finish-upgrade --sidekicks
+  only:
+    - /master/
+  tags:
+    - docker
